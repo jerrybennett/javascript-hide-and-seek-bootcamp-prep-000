@@ -3,5 +3,5 @@ function getFirstSelector(selector) {
 }
 
 function nestedTarget() {
-  getFirstSelector()
+  return getFirstSelector(div div div div)
 }
