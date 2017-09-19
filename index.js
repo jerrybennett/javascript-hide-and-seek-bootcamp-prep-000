@@ -18,7 +18,7 @@ function increaseRankBy(n) {
 function deepestChild() {
   const deepDive = document.getElementById('grand-node').querySelector('div')
   const arr = []
-
+function find(array, criteriaFn) {
   const current = deepDive
   const next = []
   while (current) {
@@ -32,7 +32,6 @@ function deepestChild() {
         next.push(current[i])
       }
     }
-
     // after pushing any children (if there
     // are any) of `current` onto `next`, we want to take
     // the first element of `next` and make it the
@@ -40,10 +39,10 @@ function deepestChild() {
     // loop
     current = next.shift()
   }
-
   // if we haven't
   return null
   }
+}
 }
 
 <div id="grand-node">
