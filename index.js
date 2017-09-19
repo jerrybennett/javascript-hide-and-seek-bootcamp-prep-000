@@ -5,3 +5,7 @@ function getFirstSelector(selector) {
 function nestedTarget() {
   return getFirstSelector('.target')
 }
+
+function increaseRankBy(n) {
+  
+}
