@@ -11,6 +11,6 @@ function increaseRankBy(n) {
 
   for (let i = 0; i < list.length; i++) {
     const start = parseInt(list[i].innerHTML)
-    list[i].innerHTML = (start + 1)
+    list[i].innerHTML = (start + n)
   }
 }
