@@ -16,15 +16,33 @@ function increaseRankBy(n) {
 }
 
 function deepestChild() {
-  const deepDive = document.getElementById('grand-node').querySelectorAll('div')
+  const deepDive = document.getElementById('grand-node').querySelector('div')
   const arr = []
-  function find(array, criteriaFn) {
-    for (let i = 0; i < array.length; i++) {
-      if (criteriaFn(array[i])) {
-        return array[i]
+function find(array, criteriaFn) {
+  const current = array
+  const next = []
+  while (current) {
+    if (criteriaFn(current)) {
+      return current
+    }
+    // if `current` is an array, we want to push all of
+    // its elements (which might be arrays) onto `next`
+    if (Array.isArray(current)) {
+      for (let i = 0; i < current.length; i++) {
+        next.push(current[i])
       }
     }
+    // after pushing any children (if there
+    // are any) of `current` onto `next`, we want to take
+    // the first element of `next` and make it the
+    // new `current` for the next pass of the `while`
+    // loop
+    current = next.shift()
   }
+  // if we haven't
+  return null
+  }
+}
 }
 
 <div id="grand-node">
