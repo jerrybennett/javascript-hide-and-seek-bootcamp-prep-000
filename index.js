@@ -17,7 +17,13 @@ function increaseRankBy(n) {
 
 function deepestChild() {
   const deepDive = document.getElementById('grand-node').querySelector('div')
+  const arr = []
 
+  const current = deepDive
+  const next = []
+  while (current) {
+
+  }
 }
 
 <div id="grand-node">
