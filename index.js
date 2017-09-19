@@ -20,6 +20,8 @@ function deepestChild() {
   const iD = document.getElementById('grand-node').document.querySelectorAll('div')
   arr.push(iD)
   console.log(arr)
-  for(var i = 0; i < )
+  for(var i = 0; i < arr.length; i++) {
+
+  }
   return document.querySelector('#grand-node div div div div')
 }
