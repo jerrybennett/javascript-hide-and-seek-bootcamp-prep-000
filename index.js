@@ -19,9 +19,13 @@ function deepestChild() {
   const arr = []
   const iD = document.getElementById('grand-node').document.querySelectorAll('div')
   arr.push(iD)
-  console.log(arr)
-  for(var i = 0; i < arr.length; i++) {
-
+  function find(array, criteriaFn) {
+    for (let i = 0; i < array.length; i++) {
+      if (criteriaFn(array[i])) {
+        return array[i]
+      }
+    }
   }
-  return document.querySelector('#grand-node div div div div')
+  return find(arr)
+  // return document.querySelector('#grand-node div div div div')
 }
