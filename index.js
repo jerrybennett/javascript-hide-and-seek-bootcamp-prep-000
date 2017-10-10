@@ -1,17 +1,19 @@
+// accepts a selector and returns the first element that matches
 function getFirstSelector( selector ) {
   return document.querySelector(selector);
 }
 
 function nestedTarget() {
-  return getFirstSelector('.target');
+  return document.querySelector('#nested .target');
 }
 
 function increaseRankBy(n) {
-  const list = document.getElementById('app').querySelectorAll('ul.ranked-list li');
-
-  for (let i = 0; i < list.length; i++) {
-    const start = parseInt(list[i].innerHTML);
-    list[i].innerHTML = (start + n);
+  // create array of li s from ul.ranked-list
+  const rank = document.querySelectorAll('ul.ranked-list li');
+  // iterate through rank
+  for (let i = 0; i < rank.length; i++) {
+    // set current rank innerHTML as current rank index value plus n 
+    rank[i].innerHTML = parseInt(rank[i].innerHTML) + n;
   }
 }
 
